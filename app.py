@@ -75,22 +75,23 @@ def category(name):
 
 @app.route("/add/<int:id>")
 def add(id):
+    global cart
 
-    for c in products.values():
-        for item in c:
-            if item["id"]==id:
-                cart.append(item)
+    try:
+        for category in products.values():
+            for item in category:
+                if item["id"] == id:
+                    cart.append(item)
+                    break
+        return redirect("/cart")
 
-    return redirect("/cart")
-
+    except Exception as e:
+        return f"Error: {e}"
 
 @app.route("/cart")
 def view_cart():
-
-    total=sum(item["price"] for item in cart)
-
-    return render_template("cart.html",cart_items=cart,total=total,cart=len(cart))
-
+    total = sum(item["price"] for item in cart)
+    return render_template("cart.html", cart_items=cart, total=total)
 
 @app.route("/payment")
 def payment():

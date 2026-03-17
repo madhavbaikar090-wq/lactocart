@@ -34,8 +34,9 @@
 
 <p>₹{{item.price}}</p>
 
-<a href="/add/{{item.id}}">Add To Cart</a>
-
+<a href="/add/{{ item['id'] }}">
+    <button>Add To Cart</button>
+</a>
 </div>
 
 {% endfor %}
