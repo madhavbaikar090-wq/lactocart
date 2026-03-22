@@ -1,41 +1,11 @@
-<div class="header">
-
-<div class="logo">
-<img src="/static/images/logo.png">
-<h2>LactoCart</h2>
-</div>
-
-<div>
-<a href="/cart">🛒 {{cart}}</a>
-</div>
-
-</div>
-
-    
-<form action="/search" class="search">
-
-<input name="q" placeholder="Search milk, curd, butter...">
-
-<button>Search</button>
-
-</form>
-
-<div class="cart">
-<a href="/cart">🛒 {{cart}}</a>
-</div>
-
-</div>
 <link rel="stylesheet" href="/static/style.css">
-</head>
 
-<body>
+{% include 'header.html' %}
 
-<div class="header">
-<img src="/static/images/logo.png">
-<h1>LactoCart</h1>
-</div>
-
-<h2>Shop Products</h2>
+<form action="/search" class="search">
+<input name="q" placeholder="Search...">
+<button>Search</button>
+</form>
 
 <div class="grid">
 
@@ -60,6 +30,3 @@
 </a>
 
 </div>
-
-</body>
-</html>

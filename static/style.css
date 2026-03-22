@@ -21,12 +21,7 @@ gap:10px;
 }
 
 .logo img{
-height:40px;   /* FIX: small logo */
-width:auto;
-}
-
-.cart{
-font-size:18px;
+height:40px;
 }
 
 .grid{
@@ -49,20 +44,4 @@ width:120px;
 
 .search{
 margin-top:20px;
-}
-
-input{
-padding:8px;
-}
-
-button{
-padding:8px 15px;
-}
-
-@media(max-width:600px){
-
-.grid{
-grid-template-columns:repeat(2,140px);
-}
-
 }

@@ -1,48 +1,15 @@
-<div class="header">
-
-<div class="logo">
-<img src="/static/images/logo.png">
-<h2>LactoCart</h2>
-</div>
-
-<div>
-<a href="/cart">🛒 {{cart}}</a>
-</div>
-
-</div>
-<!DOCTYPE html>
-<html>
-<head>
-    <div class="header">
-
-<div class="logo">
-<img src="/static/images/logo.png">
-<h2>LactoCart</h2>
-</div>
 <link rel="stylesheet" href="/static/style.css">
-</head>
 
-<body>
+{% include 'header.html' %}
 
 <h2>Your Cart</h2>
 
-{% if cart_items %}
+{% for item in cart_items %}
+<p>{{item.name}} - ₹{{item.price}}</p>
+{% endfor %}
 
-    {% for item in cart_items %}
-        <p>{{ item['name'] }} - ₹{{ item['price'] }}</p>
-    {% endfor %}
+<h3>Total ₹{{total}}</h3>
 
-    <h3>Total ₹{{ total }}</h3>
-
-    <a href="/payment">
-        <button>Proceed To Payment</button>
-    </a>
-
-{% else %}
-
-    <p>Cart is empty</p>
-
-{% endif %}
-
-</body>
-</html>
+<a href="/payment">
+<button>Proceed To Payment</button>
+</a>
