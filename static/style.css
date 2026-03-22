@@ -1,103 +1,29 @@
-body{
-margin:0;
-font-family: 'Segoe UI', sans-serif;
-background:url("/static/images/bg.jpg");
-background-size:cover;
-}
-
-/* HEADER */
-.header{
-background:white;
-padding:15px 30px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
-}
-
-.logo{
-display:flex;
-align-items:center;
-gap:10px;
-}
-
-.logo img{
-height:45px;
-}
-
-.cart a{
-font-size:18px;
-text-decoration:none;
-}
-
-/* CENTER BOX */
-.container{
-width:350px;
-margin:80px auto;
-background:white;
-padding:30px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
-text-align:center;
-}
-
-/* INPUTS */
-input{
-width:90%;
-padding:10px;
-margin:10px;
-border-radius:5px;
-border:1px solid #ccc;
-}
-
-/* BUTTON */
-button{
-padding:10px 20px;
-background:#00b894;
-color:white;
-border:none;
-border-radius:5px;
-cursor:pointer;
-}
-
-/* GRID */
 .grid{
 display:grid;
-grid-template-columns:repeat(2,200px);
-gap:30px;
+grid-template-columns:repeat(2,250px);
+gap:40px;
 justify-content:center;
 margin-top:40px;
 }
 
-/* PRODUCT CARD */
 .product{
 background:white;
-padding:20px;
-border-radius:10px;
-box-shadow:0 3px 10px rgba(0,0,0,0.2);
+padding:25px;
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
 text-align:center;
+transition:0.3s;
+}
+
+.product:hover{
+transform:scale(1.05);
 }
 
 .product img{
-width:120px;
+width:150px;
 }
 
-/* SEARCH */
-.search{
-text-align:center;
-margin-top:20px;
-}
-
-/* RECEIPT */
-.receipt{
-width:400px;
-margin:50px auto;
-background:white;
-padding:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.3);
-}
-
-.receipt h2{
-text-align:center;
+button{
+padding:10px 20px;
+margin:5px;
 }
