@@ -1,14 +1,24 @@
 <link rel="stylesheet" href="/static/style.css">
-
 {% include 'header.html' %}
 
-<h2>Receipt</h2>
+<div class="receipt">
+
+<h2>LactoCart Bill</h2>
+
+<hr>
 
 {% for item in cart_items %}
 <p>{{item.name}} - ₹{{item.price}}</p>
 {% endfor %}
 
-<h3>Total ₹{{total}}</h3>
+<hr>
 
-<p>Cash On Delivery</p>
-<p>Status: On the way 🚚</p>
+<h3>Total: ₹{{total}}</h3>
+
+<p>Payment: Cash on Delivery</p>
+
+<p>Status: 🚚 On the way</p>
+
+<p style="text-align:center">Thank you for shopping!</p>
+
+</div>
