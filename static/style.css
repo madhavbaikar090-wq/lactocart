@@ -1,8 +1,10 @@
+/* BODY */
 body{
 margin:0;
-font-family:Arial;
+font-family:'Segoe UI', Arial, sans-serif;
 background:url("/static/images/bg.jpg");
 background-size:cover;
+background-position:center;
 }
 
 /* HEADER */
@@ -12,7 +14,10 @@ padding:12px 25px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 2px 5px rgba(0,0,0,0.1);
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+position:sticky;
+top:0;
+z-index:100;
 }
 
 .logo{
@@ -21,31 +26,66 @@ align-items:center;
 gap:10px;
 }
 
-/* 🔥 LOGO FIX */
+/* ✅ FIXED LOGO SIZE */
 .logo img{
 height:40px;
 width:auto;
 object-fit:contain;
 }
 
-/* prevent any image from going full screen */
+/* prevent any image overflow */
 img{
 max-width:100%;
 height:auto;
 }
 
-/* CENTER BOX */
+/* HEADER LINKS (BACK + CART) */
+.header a{
+margin-left:15px;
+font-size:20px;
+text-decoration:none;
+color:black;
+}
+
+/* CENTER CONTAINER (LOGIN / CART / RECEIPT) */
 .container{
 width:350px;
 margin:80px auto;
 background:white;
 padding:30px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.2);
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.2);
 text-align:center;
 }
 
-/* GRID */
+/* INPUT FIELDS */
+input{
+width:90%;
+padding:12px;
+margin:10px 0;
+border-radius:6px;
+border:1px solid #ccc;
+font-size:14px;
+}
+
+/* BUTTON */
+button{
+padding:10px 20px;
+margin:5px;
+border:none;
+border-radius:6px;
+background:#00b894;
+color:white;
+font-size:14px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+background:#019875;
+}
+
+/* GRID (SHOP PAGE) */
 .grid{
 display:grid;
 grid-template-columns:repeat(2,250px);
@@ -61,14 +101,62 @@ padding:25px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.2);
 text-align:center;
+transition:0.3s;
 }
 
+.product:hover{
+transform:scale(1.05);
+}
+
+/* PRODUCT IMAGE */
 .product img{
 width:140px;
+margin-bottom:10px;
 }
 
-button{
-padding:10px 20px;
-margin:5px;
-cursor:pointer;
+/* SEARCH BAR */
+.search{
+text-align:center;
+margin-top:20px;
+}
+
+.search input{
+width:250px;
+}
+
+/* RECEIPT (BILL PAGE) */
+.receipt{
+width:400px;
+margin:50px auto;
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 6px 20px rgba(0,0,0,0.3);
+}
+
+.receipt h2{
+text-align:center;
+margin-bottom:10px;
+}
+
+.receipt hr{
+margin:10px 0;
+}
+
+/* MOBILE RESPONSIVE */
+@media(max-width:600px){
+
+.grid{
+grid-template-columns:repeat(2,150px);
+gap:20px;
+}
+
+.container{
+width:90%;
+}
+
+.receipt{
+width:90%;
+}
+
 }
