@@ -1,3 +1,51 @@
+body{
+margin:0;
+font-family:Arial;
+background:url("/static/images/bg.jpg");
+background-size:cover;
+}
+
+/* HEADER */
+.header{
+background:white;
+padding:12px 25px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+box-shadow:0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+/* 🔥 LOGO FIX */
+.logo img{
+height:40px;
+width:auto;
+object-fit:contain;
+}
+
+/* prevent any image from going full screen */
+img{
+max-width:100%;
+height:auto;
+}
+
+/* CENTER BOX */
+.container{
+width:350px;
+margin:80px auto;
+background:white;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
+text-align:center;
+}
+
+/* GRID */
 .grid{
 display:grid;
 grid-template-columns:repeat(2,250px);
@@ -6,24 +54,21 @@ justify-content:center;
 margin-top:40px;
 }
 
+/* PRODUCT CARD */
 .product{
 background:white;
 padding:25px;
 border-radius:12px;
 box-shadow:0 5px 15px rgba(0,0,0,0.2);
 text-align:center;
-transition:0.3s;
-}
-
-.product:hover{
-transform:scale(1.05);
 }
 
 .product img{
-width:150px;
+width:140px;
 }
 
 button{
 padding:10px 20px;
 margin:5px;
+cursor:pointer;
 }
