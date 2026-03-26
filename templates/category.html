@@ -3,24 +3,13 @@
 
 <h2 style="text-align:center">{{category}}</h2>
 
+<div class="grid">
 {% for item in items %}
-
 <div class="product">
-
 <img src="/static/images/{{item.image}}">
 <h3>{{item.name}}</h3>
 <p>₹{{item.price}}</p>
-
-<a href="/add/{{item.id}}">
-<button>Add To Cart</button>
-</a>
-
+<a href="/add/{{item.id}}"><button>Add to Cart</button></a>
 </div>
-
 {% endfor %}
-
-<div style="text-align:center; margin-top:20px;">
-<a href="/shop">
-<button>⬅️ Back to Shop</button>
-</a>
 </div>
