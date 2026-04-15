@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="/static/style.css">
+{% include 'header.html' %}
+
+<h2 style="text-align:center">{{category}}</h2>
+
+<div class="grid">
+{% for i in items %}
+<div class="product">
+<img src="/static/images/{{i.img}}">
+<p>{{i.name}}</p>
+<p>₹{{i.price}}</p>
+
+<a href="/add/{{i.name}}/{{i.price}}">
+<button>Add to Cart</button>
+</a>
+</div>
+{% endfor %}
+</div>
+
+<div style="text-align:center;margin-top:20px;">
+<a href="/shop"><button>⬅ Back</button></a>
+</div>

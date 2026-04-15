@@ -3,25 +3,15 @@
 
 <div class="container">
 
-<h2>LactoCart Bill</h2>
+<h2>Receipt</h2>
 
-<hr>
-
-{% for item in cart_items %}
-<p>{{item.name}} - ₹{{item.price}} × {{item.qty}}</p>
+{% for i in cart %}
+<p>{{i.name}} - ₹{{i.price}}</p>
 {% endfor %}
 
-<hr>
+<h3>Total ₹{{total}}</h3>
 
-<h3>Total: ₹{{total}}</h3>
-
-<p>Cash On Delivery</p>
-<p>Status: 🚚 On the way</p>
-
-<br>
-
-<a href="/shop">
-<button>🛍️ Shop Again</button>
-</a>
+<p>Cash on Delivery</p>
+<p>🚚 Order On The Way</p>
 
 </div>
